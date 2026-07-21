@@ -15,3 +15,5 @@ INNER JOIN customers_arla c
      ON c.customer_id = s.customer_id
 WHERE
     p.product_name = 'DANO Full Cream Milk Powder 400g';      
+
+    

@@ -14,3 +14,4 @@ INNER JOIN sales_arla s
     ON p.product_id = s.product_id
 GROUP BY brand
 ORDER BY brand_reveneue DESC;
+
