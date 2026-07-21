@@ -1,11 +1,8 @@
 SELECT * 
-FROM products_arla
-LIMIT 5;
+FROM products_arla;
 
 SELECT * 
-FROM customers_arla
-LIMIT 5;
+FROM customers_arla;
 
 SELECT * 
-FROM sales_arla
-LIMIT 5;
+FROM sales_arla;
