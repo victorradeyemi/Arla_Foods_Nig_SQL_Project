@@ -1,46 +1,135 @@
---update later
+# 🥛 Arla Foods Nigeria Sales Analysis with SQL
 
-# Arla Foods Nigeria — Practice SQL Database
+## Introduction
 
-A relational database project modelled on Arla Foods' Nigerian product and customer footprint, built for SQL practice (joins, aggregation, subqueries, window-style analysis).
+Every sale tells a story. This project explores a fictional sales dataset inspired by **Arla Foods Nigeria** to answer practical business questions using SQL.
 
-> **Note:** This is a synthetic practice dataset. Product names and brand portfolio (DANO, Arla, Lurpak, Castello, Puck) reflect Arla's real brand lineup in Nigeria, but individual SKUs, prices, costs, and all customer and sales records are generated for practice purposes — not actual Arla business data.
+Rather than writing isolated queries, I approached the dataset as though I were supporting a commercial team—analysing revenue, customer purchasing behaviour, product performance, profitability, and regional sales trends.
 
-## Schema
+> **Note**
+>
+> This is a **synthetic dataset** created for learning purposes. While brands such as **DANO, Lurpak, Castello, Puck, and Arla** reflect Arla Foods' real product portfolio, all customers, transactions and revenue figures are fictional.
 
-Three tables, star-schema style:
+---
 
-| Table | Rows | Description |
-|---|---:|---|
-| `products` | 224 | ERP-style product master — one row per SKU |
-| `customers` | 220 | Distributors, retailers, HORECA (hotel/restaurant/cafe) accounts |
-| `sales` | 1,000 | Transactions for the 2025 calendar year, referencing `product_id` and `customer_id` |
+## 📌 Business Questions
 
-**Total: 1,444 rows**
+This project answers ten business questions, including:
 
-`sales` is the fact table; `products` and `customers` are dimension tables it joins against.
+- Which products generated the highest revenue?
+- Which brands performed best after discounts?
+- Which customers have never purchased a Lurpak product?
+- Which states generated the highest supermarket spending?
+- Which recently launched products generated over ₦2 million in revenue?
+- How did revenue change across the four quarters of 2025?
 
-## Files
+---
 
-- `schema.sql` — `CREATE TABLE` statements, primary/foreign keys, indexes
-- `load_data.sql` — `COPY` statements to load the CSVs (fill in your local file path first)
-- `products.csv`, `customers.csv`, `sales.csv` — the data
-- `Data_Dictionary.md` — column-by-column reference for all three tables
-- `Project_Questions.docx` — 10 practice SQL exercises with rationale
+## 🛠️ Tools
 
-## Setup
+| Tool | Purpose |
+|------|---------|
+| PostgreSQL | Database management |
+| SQL | Data querying and analysis |
+| Visual Studio Code | Writing and executing SQL |
+| Git & GitHub | Version control and documentation |
 
-1. Create the database and run `schema.sql`.
-2. Open `load_data.sql`, replace the empty `''` in each `COPY` statement with the full path to the matching CSV on your machine.
-3. Run `load_data.sql` — load `products` and `customers` before `sales`, since `sales` has foreign keys pointing to both.
-4. Work through `Project_Questions.docx`.
+---
 
-## Brand & category coverage
+# 🔎 Analysis
 
-| Brand | Categories |
-|---|---|
-| DANO | Milk Powder, UHT Milk, Flavoured Milk, Yoghurt, Dairy Dessert |
-| Arla | UHT Milk, Butter, Yoghurt, Cream Cheese |
-| Lurpak | Butter |
-| Castello | Cheese |
-| Puck | Cream Cheese, Cooking Cream, Whipping Cream, Cheese |
+Each query was written to answer a specific business problem rather than simply demonstrate SQL syntax.
+
+### Product Sales
+Tracked every transaction involving a selected product together with the purchasing customer and sale date.
+
+📷 *Add screenshot:* `visuals/q1_product_sales.png`
+
+---
+
+### Brand Revenue
+Calculated net revenue for every brand after discounts and ranked performance.
+
+📷 *Add screenshot:* `visuals/q2_brand_revenue.png`
+
+---
+
+### Discount Analysis
+Compared average discounts across product categories to understand promotional patterns.
+
+---
+
+### Customer Purchase Behaviour
+Identified customers who have never purchased a Lurpak product using exclusion logic.
+
+---
+
+### Customer Segmentation
+Summarised purchasing behaviour by customer type using total quantity purchased and distinct products.
+
+---
+
+### Product Performance
+Ranked the five highest revenue generating products.
+
+📷 *Add screenshot:* `visuals/q6_top_products.png`
+
+---
+
+### Regional Performance
+Compared supermarket spending across Nigerian states.
+
+📷 *Add screenshot:* `visuals/q7_state_spend.png`
+
+---
+
+### Profitability
+Calculated product profit margins and identified the most profitable products that recorded sales.
+
+---
+
+### Quarterly Revenue
+Analysed brand revenue across all four quarters of 2025.
+
+📷 *Add screenshot:* `visuals/q9_quarterly_revenue.png`
+
+---
+
+### Recently Launched Products
+Identified products launched from 2023 onwards that exceeded ₦2 million in revenue.
+
+---
+
+# 💡 What I Learned
+
+Working on this project strengthened both my SQL skills and my analytical thinking.
+
+Some of the concepts I reinforced include:
+
+- Writing efficient multi-table joins.
+- Choosing the correct aggregate function for different business questions.
+- Understanding when to use **WHERE** versus **HAVING**.
+- Using `COUNT(DISTINCT)` appropriately.
+- Calculating revenue, discounts and profit margins directly in SQL.
+- Working with PostgreSQL date functions such as `EXTRACT()`.
+- Translating business questions into SQL queries instead of writing queries first.
+
+---
+
+# 📈 Key Takeaways
+
+Although the dataset is fictional, the project demonstrates how SQL can be used to:
+
+- Identify top performing products and brands.
+- Analyse customer purchasing behaviour.
+- Compare regional sales performance.
+- Measure product profitability.
+- Produce meaningful business reports from transactional data.
+
+---
+
+# 🎯 Closing Thoughts
+
+This project challenged me to think beyond SQL syntax. Every query began with a business question and ended with a result that could support decision making. It also reinforced the importance of writing clean, readable SQL while building confidence with joins, aggregations, filtering, grouping and analytical functions.
+
+I plan to continue expanding this project by adding more business scenarios, advanced SQL techniques and interactive dashboards using Power BI.
