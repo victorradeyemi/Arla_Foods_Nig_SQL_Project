@@ -55,7 +55,7 @@ ORDER BY
     total_revenue DESC;
 ```
 
-![Quarterly brand revenue](./images/quarterly_brand_revenue.jpg)
+![Quarterly brand revenue](/images/quarterly_brand_revenue.jpg)
 
 | Quarter | Leading brand | Revenue |
 |---|---|---|
