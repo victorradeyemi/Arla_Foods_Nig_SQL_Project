@@ -55,8 +55,6 @@ ORDER BY
     total_revenue DESC;
 ```
 
-![Quarterly brand revenue](/images/quarterly_brand_revenue.jpg)
-
 | Quarter | Leading brand | Revenue |
 |---|---|---|
 | Q1 | Lurpak | ₦29.05M |
@@ -100,7 +98,9 @@ ORDER BY
     total_revenue DESC
 LIMIT 5;    
 ```
-![Top 5 products by revenue](assets\top5_products.jpg)
+>![Top 5 products by revenue](assets\top5_products.jpg)
+
+
 
 | Rank | Product | Brand | Category | Revenue |
 |---|---|---|---|---:|
