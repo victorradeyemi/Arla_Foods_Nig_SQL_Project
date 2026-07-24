@@ -99,7 +99,7 @@ ORDER BY
 LIMIT 5;    
 ```
 
-![Top 5 products by revenue](./assets\top5_products.png)
+![Top 5 products by revenue](./assets/top5_products.png)
 _Bar graph visualizing the top 5 products in revenue for Arla Foods Ng; Claude generated this graph from my SQL query results_
 
 | Rank | Product | Brand | Category | Revenue |
@@ -130,7 +130,7 @@ GROUP BY c.state
 ORDER BY total_spend DESC;
 ```
 
-![Top 10 states by supermarket spend](./assets\state_supermarket_spend.png)
+![Top 10 states by supermarket spend](./assets/state_supermarket_spend.png)
 _Bar chart showing the highest spending states among supermarket customers; Claude generated this graph from my SQL query results_
 
 | Rank | State | Spend |
