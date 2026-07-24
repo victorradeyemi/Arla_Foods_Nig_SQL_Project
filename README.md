@@ -33,7 +33,7 @@ For this project, I worked with:
 
 Each query below was aimed at answering one specific business question. Here's how I approached each one, and what came out of it.
 
-### 1️⃣ Quarterly brand revenue — who's carrying the year?
+### 1️⃣ Quarterly brand revenue — the top performing in a year
 
 ```sql
 SELECT
@@ -98,9 +98,9 @@ ORDER BY
     total_revenue DESC
 LIMIT 5;    
 ```
->![Top 5 products by revenue](assets\top5_products.jpg)
 
-
+![Top 5 products by revenue](assets\top5_products.png)
+_Bar graph visualizing the top 5 products in revenue for Arla Foods Ng; Claude generated this graph from my SQL query results_
 
 | Rank | Product | Brand | Category | Revenue |
 |---|---|---|---|---:|
@@ -130,7 +130,8 @@ GROUP BY c.state
 ORDER BY total_spend DESC;
 ```
 
-![Top 10 states by supermarket spend](assets\state_supermarket_spend.jpg)
+![Top 10 states by supermarket spend](assets\state_supermarket_spend.png)
+_Bar chart showing the highest spending states among supermarket customers; Claude generated this graph from my SQL query results_
 
 | Rank | State | Spend |
 |---|---|---:|
